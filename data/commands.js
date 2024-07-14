@@ -11,6 +11,7 @@ const commands_list = [
         name: "username",
         description: "username of the slash user",
         type: 3, //string
+        required: true,
       },
     ],
   },

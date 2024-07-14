@@ -21,11 +21,16 @@ client.on("ready", () => {
   console.log(`${client.user.tag} has logged in!`);
 });
 
-client.on("interactionCreate", (interaction) => {
+client.on("interactionCreate", async (interaction) => {
   if (interaction.isChatInputCommand()) {
     console.log("/" + interaction.commandName + " command invoked");
+
     if (interaction.commandName === "hello") {
-      interaction.reply({ content: `Hello ${interaction.user.tag}!` });
+      await interaction.reply({
+        content: `${interaction.user.tag} said hello to ${
+          interaction.options.get("username").value
+        }`,
+      });
     }
   }
 });
