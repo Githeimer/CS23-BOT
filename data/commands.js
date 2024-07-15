@@ -15,6 +15,18 @@ const commands_list = [
       },
     ],
   },
+  {
+    name: "ping",
+    description: "pings the selected user",
+    options: [
+      {
+        name: "pinguser",
+        description: "name of user",
+        type: 3,
+        required: false,
+      },
+    ],
+  },
 ];
 
 export { commands_list };
